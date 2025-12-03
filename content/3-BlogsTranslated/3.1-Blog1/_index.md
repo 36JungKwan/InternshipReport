@@ -37,7 +37,7 @@ Với dữ liệu đặc biệt, AWS Marketplace được tích hợp với [AWS
 
 AWS có một chuỗi blog ba phần để hướng dẫn bạn tối ưu hóa Cơ sở hạ tầng AWS cho Bền vững dù bạn đang làm việc với [compute](https://aws.amazon.com/blogs/architecture/optimizing-your-aws-infrastructure-for-sustainability-part-i-compute/), [storage](https://aws.amazon.com/blogs/architecture/optimizing-your-aws-infrastructure-for-sustainability-part-ii-storage/), hoặc [networking](https://aws.amazon.com/blogs/architecture/optimizing-your-aws-infrastructure-for-sustainability-part-iii-networking/). Các kỹ thuật trong những blog này giúp giảm tiêu thụ tài nguyên tổng thể và cải thiện tác động môi trường của việc vận hành ứng dụng trên AWS. Chúng tôi cũng khuyến khích các đối tác và khách hàng thiết lập một [Cloud Center of Excellence](https://aws.amazon.com/blogs/apn/how-aws-partners-can-achieve-sustainability-goals-with-a-cloud-center-of-excellence/) — một khung đảm bảo việc áp dụng thực tiễn đám mây bền vững vào tổ chức của bạn.
 
-![Enter image alt description](Images/dYK_Image_1.png)
+![Enter image alt description](/images/3-Blog/blog1_figure1.png)
 
 *Hình 1. Cách sử dụng các dịch vụ AWS để giải quyết mục tiêu bền vững của khách hàng*
 
@@ -62,7 +62,7 @@ Các đối tác cũng có thể tận dụng Hướng dẫn AWS để tìm sơ 
 
 ### **Câu chuyện Đối tác: Giải pháp AI của Carrier Global cho Mục tiêu Bền vững**
 
-![Enter image alt description](Images/YuW_Image_2.png)
+![Enter image alt description](/images/3-Blog/blog1_figure2.png)
 
 *Hình 2. Logo Carrier Abound*
 
