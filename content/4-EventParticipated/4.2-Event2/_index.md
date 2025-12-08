@@ -1,132 +1,142 @@
 title: "Event 2"
 date: 2025-09-09
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+# Summary Report: "Reimagine Software Development with AI"
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+### Event Overview
 
-### Event Objectives
+- **Event Name:** Reimagine Software Development with AI  
+- **Date:** October 3, 2025  
+- **Role:** Attendee  
+- **Format:** Technical talk and demonstration  
+- **Location:** 26th floor, Bitexco Financial Tower, District 1, Ho Chi Minh City, Vietnam
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+This event explored how generative AI is fundamentally transforming the software development lifecycle, from initial planning and design through coding, testing, deployment, and operations. The speakers demonstrated practical AI-assisted workflows and discussed strategies for teams to safely and effectively adopt these powerful tools.
 
-### Speakers
+### Main Topics Covered
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+#### AI-Assisted Code Generation
+- **Code generation**: Using AI to generate boilerplate code, implement functions based on comments, and create entire modules
+- **Code refactoring**: Leveraging AI to improve code quality, optimize performance, and modernize legacy code
+- **Multi-language support**: AI tools that can work across different programming languages and frameworks
+- **Context-aware coding**: How AI understands project structure, dependencies, and coding standards
 
-### Key Highlights
+#### Testing & Quality Assurance
+- **Test generation**: Automatically generating unit tests, integration tests, and test cases from code
+- **Test coverage analysis**: Using AI to identify gaps in test coverage and suggest additional tests
+- **Bug detection**: AI-powered static analysis and code review to catch potential issues early
+- **Performance testing**: Generating load tests and performance benchmarks
 
-#### Identifying the drawbacks of legacy application architecture
+#### Documentation & Knowledge Management
+- **Auto-documentation**: Generating API documentation, code comments, and technical documentation from code
+- **Documentation updates**: Keeping documentation in sync with code changes automatically
+- **Knowledge extraction**: Summarizing codebases and creating onboarding materials
+- **Technical writing**: Assisting with writing clear, concise technical documentation
 
-- Long product release cycles → Lost revenue/missed opportunities
-- Inefficient operations → Reduced productivity, higher costs
-- Non-compliance with security regulations → Security breaches, loss of reputation
+#### Debugging & Troubleshooting
+- **Error analysis**: AI assistance in understanding error messages and stack traces
+- **Root cause analysis**: Helping identify the underlying causes of bugs and issues
+- **Incident response**: Using AI to analyze logs, metrics, and traces during incidents
+- **Performance optimization**: Identifying bottlenecks and suggesting improvements
 
-#### Transitioning to modern application architecture – Microservices
+#### Integration with Development Workflows
+- **IDE integration**: AI assistants embedded in popular IDEs (VS Code, IntelliJ, etc.)
+- **CI/CD integration**: Using AI in pipelines for code review, testing, and deployment decisions
+- **Version control**: AI-powered commit message generation and code review assistance
+- **Project management**: AI assistance in task breakdown, estimation, and sprint planning
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+#### Prompt Engineering Best Practices
+- **Effective prompting**: Techniques for writing prompts that produce high-quality results
+- **Iterative refinement**: How to refine prompts based on initial outputs
+- **Context management**: Providing the right amount of context (code, documentation, requirements)
+- **Prompt patterns**: Common patterns for different types of development tasks
 
-- **Queue Management**: Handle asynchronous tasks
-- **Caching Strategy**: Optimize performance
-- **Message Handling**: Flexible inter-service communication
+#### Governance & Safety
+- **Code quality**: Ensuring AI-generated code meets quality standards
+- **Security considerations**: Preventing AI from introducing vulnerabilities or exposing sensitive data
+- **Data privacy**: Understanding what data is sent to AI services and how it's used
+- **Human-in-the-loop**: When and how to involve human review in AI-assisted workflows
+- **Compliance**: Meeting regulatory requirements when using AI tools
 
-#### Domain-Driven Design (DDD)
+### Detailed Technical Insights
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts
-- **Bookstore case study**: Demonstrates real-world DDD application
-- **Context mapping**: 7 patterns for integrating bounded contexts
+#### AI Development Tools Ecosystem
+The event covered various categories of AI development tools:
+- **Code completion tools**: GitHub Copilot, Amazon CodeWhisperer, Tabnine
+- **Chat-based assistants**: ChatGPT, Claude, specialized coding assistants
+- **Code review tools**: AI-powered code review and suggestions
+- **Testing tools**: AI-generated test cases and test automation
+- **Documentation tools**: Auto-documentation generators
 
-#### Event-Driven Architecture
+#### Architectural Patterns for AI Integration
+- **Agent-based architectures**: Using AI agents that can perform complex, multi-step tasks
+- **RAG (Retrieval-Augmented Generation)**: Combining AI with codebase knowledge for better context
+- **Fine-tuning vs prompt engineering**: When to fine-tune models vs using better prompts
+- **Hybrid approaches**: Combining multiple AI tools and techniques
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming
-- **Benefits**: Loose coupling, scalability, resilience
-- **Sync vs async comparison**: Understanding the trade-offs
+#### Best Practices for Team Adoption
+- **Starting small**: Begin with low-risk use cases like documentation and tests
+- **Establishing guidelines**: Creating team standards for AI tool usage
+- **Training and onboarding**: Helping team members learn to use AI tools effectively
+- **Measuring impact**: Tracking productivity improvements and code quality metrics
 
-#### Compute Evolution
+### Key Learnings
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria for appropriate choice
+#### AI as a Pair Programmer
+- AI is most effective when used as a **collaborative tool** that augments human developers, not replaces them
+- The best results come from developers who understand the codebase and can guide AI effectively
+- AI excels at repetitive tasks, boilerplate code, and common patterns, freeing developers for complex problem-solving
 
-#### Amazon Q Developer
+#### The Importance of Context
+- High-quality prompts with good context (repository knowledge, coding standards, project structure) significantly improve AI outputs
+- Providing examples and patterns from the existing codebase helps AI generate more consistent code
+- Understanding the limitations of AI context windows and working within those constraints
 
-- **SDLC automation**: From planning to maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+#### Risk Management
+- Start with low-risk use cases (documentation, tests, refactoring) before moving to business-critical code
+- Always review AI-generated code, especially for security-sensitive operations
+- Use AI suggestions as starting points, not final solutions
 
-### Key Takeaways
+#### Integration with DevOps
+- Combining AI tools with existing DevOps practices (version control, code review, automated testing) ensures safety and auditability
+- AI can enhance CI/CD pipelines but shouldn't bypass important quality gates
+- Use AI to improve, not replace, existing development processes
 
-#### Design Mindset
+### Personal Takeaways
 
-- **Business-first approach**: Always start from the business domain, not the technology
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams
-- **Bounded contexts**: Identifying and managing complexity in large systems
+#### Practical Applications
+- I learned how to use AI tools to speed up repetitive tasks like writing boilerplate code, generating unit tests, and creating documentation
+- I understand how to write effective prompts that produce useful results for development tasks
+- I can now integrate AI assistance into my daily coding workflow more effectively
 
-#### Technical Architecture
+#### Skills Development
+- The event reinforced that strong fundamentals in architecture, security, and clean code are still essential
+- I need to be able to evaluate AI-generated suggestions critically and understand when they're appropriate
+- Learning to work with AI is a skill in itself that requires practice and iteration
 
-- **Event storming technique**: Practical method for modeling business processes
-- Use **event-driven communication** instead of synchronous calls
-- **Integration patterns**: When to use sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless
+#### Mindset Shift
+- The event changed how I think about using AI in development - it's not about replacing developers but augmenting their capabilities
+- I'm more motivated to integrate AI assistance into my learning and development workflow
+- I understand that AI tools are evolving rapidly, and staying current with new capabilities is important
 
-#### Modernization Strategy
-
-- **Phased approach**: No rushing — follow a clear roadmap
-- **7Rs framework**: Multiple modernization paths depending on the application
-- **ROI measurement**: Cost reduction + business agility
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams
-- **Refactor microservices**: Use bounded contexts to define service boundaries
-- **Implement event-driven patterns**: Replace some sync calls with async messaging
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity
+#### Future Learning
+- I want to explore more advanced AI development tools and techniques
+- I'm interested in learning about fine-tuning models for specific use cases
+- I see value in understanding how to build AI-powered development tools myself
 
 ### Event Experience
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+This event was eye-opening in showing how AI is already transforming software development. The practical demonstrations and real-world examples made it clear that AI-assisted development is not a future concept but a present reality.
 
-#### Learning from highly skilled speakers
+The balance between showing AI capabilities and discussing governance and safety was particularly valuable. It helped me understand both the opportunities and responsibilities that come with using AI in development.
 
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.
+The event has influenced how I approach coding tasks, making me more thoughtful about when and how to leverage AI assistance while maintaining code quality and security standards.
 
-#### Hands-on technical exposure
-
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.
-
-#### Leveraging modern tools
-
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.
-
-#### Networking and discussions
-
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.
-
-#### Lessons learned
-
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.
-
-#### Some event photos
+### Event Photos
 
 _Add your event photos here_
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.

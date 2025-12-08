@@ -6,32 +6,16 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}  
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### [Blog 1 - Cách mà AWS Partner Network Đang Kích hoạt Đổi mới Bền vững](3.1-Blog1/)
 
-Tại đây sẽ là phần liệt kê, giới thiệu các blogs mà các bạn đã dịch. Ví dụ:
+Bài viết giải thích cách AWS Partner Network (APN) đồng hành cùng khách hàng trong hành trình giảm phát thải carbon thông qua các chương trình chuyên môn hóa, AWS Marketplace, Solutions Library và chuỗi tài nguyên tối ưu hạ tầng hướng bền vững. Blog cũng nêu ví dụ Carrier Global xây dựng nền tảng Abound Net Zero Management trên dịch vụ AI của AWS và các hoạt động đào tạo như Immersion Day, GameDay, Well-Architected Labs giúp đối tác nâng cao năng lực.
 
-### [Blog 1 - Getting started with healthcare data lakes: Using microservices](3.1-Blog1/)
+### [Cách để có cái nhìn toàn tổ chức về các mua sắm trên AWS Marketplace](3.2-Blog2/)
 
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.
+Bài viết giới thiệu bảng điều khiển Procurement Insights miễn phí của AWS Marketplace, giúp doanh nghiệp dùng AWS Organizations nhìn được toàn bộ hợp đồng, chi phí và lịch gia hạn phần mềm ISV. Nội dung hướng dẫn cách kích hoạt bảng điều khiển, các quyền IAM cần thiết, cách sử dụng hai tab Cost analysis và Agreements, cùng khả năng lọc, xuất dữ liệu để hỗ trợ quản trị chi phí, tuân thủ và lập ngân sách hợp đồng phần mềm.
 
-### [Blog 2 - ...](3.2-Blog2/)
+### [Blog 3 - Cách UNiDAYS mở rộng Region trên AWS trong 3 tuần](3.3-Blog3/)
 
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.
+Blog kể lại cách UNiDAYS dùng CloudFront, Route 53, ECS, DynamoDB Global Tables, EventBridge và CloudFormation/Terraform để triển khai kiến trúc active-active multi-Region nhanh chóng. Bài viết phân tích thách thức về độ trễ, tính nhất quán dữ liệu, các rào cản kỹ thuật như chia sẻ CloudFormation exports, nhân bản image ECR, đồng thời chỉ ra kết quả đạt được: giảm độ trễ từ 200 ms xuống 50 ms, tăng độ sẵn sàng và tốc độ phát hành tính năng.
 
-### [Blog 3 - ...](3.3-Blog3/)
 
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.
-
-### [Blog 4 - ...](3.4-Blog4/)
-
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.
-
-### [Blog 5 - ...](3.5-Blog5/)
-
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.
-
-### [Blog 6 - ...](3.6-Blog6/)
-
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.

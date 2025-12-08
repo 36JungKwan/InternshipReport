@@ -7,26 +7,16 @@ pre: " <b> 3. </b> "
 
 ---
 
-### [Blog 1 - Getting started with healthcare data lakes: Using microservices](3.1-Blog1/)
+### [Blog 1 - How the AWS Partner Network is Enabling Sustainable Innovation](3.1-Blog1/)
 
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
+This post describes how the AWS Partner Network (APN) helps customers cut carbon emissions through specialization programs, AWS Marketplace, the Solutions Library, and other sustainability resources. It highlights Carrier Global’s Abound Net Zero Management platform built on AWS AI services and the training motions—Immersion Day, GameDay, Well-Architected Labs—that upskill partners.
 
-### [Blog 2 - ...](3.2-Blog2/)
+### [Blog 2 - How to get organization-wide visibility into AWS Marketplace purchases](3.2-Blog2/)
 
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
+The article introduces AWS Marketplace’s free Procurement Insights dashboard, which lets Organizations administrators monitor every ISV contract, charge, and renewal schedule. It walks through enabling the dashboard, required IAM permissions, how to use the Cost analysis and Agreements tabs, and how filtering/exporting supports spend control, compliance, and budgeting.
 
-### [Blog 3 - ...](3.3-Blog3/)
+### [Blog 3 - How UNiDAYS achieved AWS Region expansion in 3 weeks](3.3-Blog3/)
 
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
+This blog shows how UNiDAYS combined CloudFront, Route 53, ECS, DynamoDB Global Tables, EventBridge, and CloudFormation/Terraform to deploy an active-active multi-Region architecture quickly. It covers latency and data-consistency challenges, technical hurdles like cross-Region CloudFormation exports and ECR image replication, and the outcomes: latency drops from 200 ms to 50 ms plus higher availability and release velocity.
 
-### [Blog 4 - ...](3.4-Blog4/)
 
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
-
-### [Blog 5 - ...](3.5-Blog5/)
-
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
-
-### [Blog 6 - ...](3.6-Blog6/)
-
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
