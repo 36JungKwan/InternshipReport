@@ -1,3 +1,4 @@
+---
 title: "Event 2"
 date: 2025-09-09
 weight: 2

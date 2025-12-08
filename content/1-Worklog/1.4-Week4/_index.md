@@ -23,7 +23,7 @@ pre: " <b> 1.4. </b> "
 | **Fri** | **- Study Module 05: Security Services on AWS:**<br>+ 05-01: Shared Responsibility Model<br>+ 05-02: Amazon Identity and access management<br>+ 05-03: Amazon Cognito<br>+ 05-04: AWS Organization<br>+ 05-05: AWS Identity Center<br>+ 05-06: Amazon Key Management Service<br>+ 05-07: AWS Security Hub | 03/10/2025 | 03/10/2025 | [05-01](https://youtu.be/tsobAlSg19g?si=-xSAVT8MZReV10RP)<br>[05-02](https://youtu.be/N_vlJGAqZxo?si=KxeWofBCdviRYax1)<br>[05-03](https://youtu.be/pZ2fgEFK3Vs?si=QWkbW4avA9wlvlhP)<br>[05-04](https://youtu.be/5oQY8Rogz9Y?si=WK72gwmztbXWQVKr)<br>[05-05](https://youtu.be/NW1xrMkNMjU?si=Owp-3CDDmW7YYTY4)<br>[05-06](https://youtu.be/GMihNQojhZc?si=Bt4oUqD2a5_IA0mm)<br>[05-07](https://youtu.be/clj2E0rNBEs?si=eUp1O-14XFDbpbbe) |
 
 ### ACHIEVEMENTS IN WEEK 4:
-1. comprehensively completed Lab 9: Mastered advanced EC2 administration tasks (Resize, Snapshot, Custom AMI, Recovery Access).
+1. Comprehensively completed Lab 9: Mastered advanced EC2 administration tasks (Resize, Snapshot, Custom AMI, Recovery Access).
 2. Successfully deployed real-world applications (LAMP Stack, Node.js) on EC2 Linux and Windows infrastructure.
 3. Practiced Cost and Governance by limiting resource creation rights by Region, Instance Type, and Time via IAM Policy.
 4. Mastered Module 04 knowledge on data storage solutions (S3, Glacier, Storage Gateway) and backup strategies.
