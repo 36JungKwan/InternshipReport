@@ -203,5 +203,5 @@ To ensure the MapVibe project succeeds, we have set specific, measurable success
 - [GitLab Repository](https://gitlab.com/4n1d/mapvibe)
 
 ## 9. IMPORTANT: Our Proposal Docs Version 
-- [Proposal Docs Version](https://docs.google.com/document/d/1-wM11mgTNaL8gvbMjAmukW9ZKzqGtHMp/edit)
+- [Proposal Docs Version](https://docs.google.com/document/d/10YCwRMZcYZ6tFfRam9gASe-DpZf98DxW/edit)
 - [Related Documents](https://drive.google.com/drive/u/0/folders/1cdBYgwzBA4Vl9ww_fCPXmbsKToTKgH4L)
