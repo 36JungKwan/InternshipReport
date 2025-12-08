@@ -140,4 +140,5 @@ The event has influenced how I approach coding tasks, making me more thoughtful 
 
 ### Event Photos
 
-_Add your event photos here_
+![Enter image alt description](/images/4-Event/event2_img1.jpg)
+![Enter image alt description](/images/4-Event/event2_img2.jpg)

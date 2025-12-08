@@ -307,5 +307,6 @@ The event structure allowed for good pacing, with each session building on previ
 
 ### Event Photos
 
-_Add your event photos here_
-
+![Enter image alt description](/images/4-Event/event4_img1.jpg)
+![Enter image alt description](/images/4-Event/event4_img2.jpg)
+![Enter image alt description](/images/4-Event/event4_img3.jpg)

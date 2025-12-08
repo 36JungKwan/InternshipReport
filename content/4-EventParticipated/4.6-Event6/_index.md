@@ -680,5 +680,5 @@ This workshop has significantly improved my understanding of how to build secure
 
 ### Event Photos
 
-_Add your event photos here_
-
+![Enter image alt description](/images/4-Event/event6_img1.jpg)
+![Enter image alt description](/images/4-Event/event6_img2.jpg)

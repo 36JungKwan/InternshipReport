@@ -10,7 +10,7 @@ During my internship, I participated in six AWS-related events and workshops. Th
 
 ---
 
-### Event 1 – AWS Cloud Day Vietnam
+### [Event 1 – AWS Cloud Day Vietnam](4.1-Event1/)
 
 &emsp;**Event Name:** AWS Cloud Day Vietnam  
 &emsp;**Role:** Attendee  
@@ -21,7 +21,7 @@ During my internship, I participated in six AWS-related events and workshops. Th
 
 ---
 
-### Event 2 – Reimagine Software Development with AI
+### [Event 2 – Reimagine Software Development with AI](4.2-Event2/)
 
 &emsp;**Event Name:** Reimagine Software Development with AI  
 &emsp;**Role:** Attendee  
@@ -32,7 +32,7 @@ During my internship, I participated in six AWS-related events and workshops. Th
 
 ---
 
-### Event 3 – Workshop: Data Science on AWS
+### [Event 3 – Workshop: Data Science on AWS](4.3-Event3/)
 
 &emsp;**Event Name:** Workshop – Data Science on AWS  
 &emsp;**Role:** Attendee  
@@ -43,33 +43,33 @@ During my internship, I participated in six AWS-related events and workshops. Th
 
 ---
 
-### Event 4 – AIML & Generative AI on AWS (AWS Cloud Mastery Series #1)
+### [Event 4 – AIML & Generative AI on AWS (AWS Cloud Mastery Series #1)](4.4-Event4/)
 
 &emsp;**Event Name:** AIML & Generative AI on AWS – AWS Cloud Mastery Series #1  
 &emsp;**Role:** Attendee  
-&emsp;**Format:** Online technical session  
+&emsp;**Format:** On-site technical session  
 
 &emsp;**Content:** The event provided an overview of machine learning and deep learning (supervised learning tasks), then introduced foundation models and generative AI, prompt engineering (good vs bad prompts, zero-shot and few-shot prompting), chain-of-thought reasoning, and Retrieval-Augmented Generation (RAG) with embeddings and Amazon Titan embeddings. The second part walked through AWS AI/ML services such as Amazon Rekognition, Translate, Textract, Transcribe, Polly, Comprehend, Kendra, and Personalize, and finally covered Amazon Bedrock AgentCore concepts like runtime, memory, identity, gateway, tools, and observability.  
 &emsp;**Outcomes:** I gained a structured mental model of the modern GenAI stack on AWS, understood how RAG pipelines are built end to end, and learned which managed services to combine when designing AI-powered applications.
 
 ---
 
-### Event 5 – DevOps on AWS (AWS Cloud Mastery Series #2)
+### [Event 5 – DevOps on AWS (AWS Cloud Mastery Series #2)](4.5-Event5/)
 
 &emsp;**Event Name:** DevOps on AWS – AWS Cloud Mastery Series #2  
 &emsp;**Role:** Attendee  
-&emsp;**Format:** Online technical session  
+&emsp;**Format:** On-site technical session  
 
 &emsp;**Content:** This session introduced DevOps principles and showed how to implement them using AWS services. Topics included infrastructure as code (CloudFormation/Terraform), CI/CD pipelines with AWS CodePipeline and CodeBuild, deployment strategies for containers and serverless applications, and monitoring/observability using CloudWatch and related tools.  
 &emsp;**Outcomes:** I learned how DevOps practices and AWS tooling fit together to automate the software delivery lifecycle, which reinforced what I had learned in other workshops about building and operating applications on AWS.
 
 ---
 
-### Event 6 – AWS Well-Architected Security Pillar Workshop
+### [Event 6 – AWS Well-Architected Security Pillar Workshop](4.6-Event6/)
 
 &emsp;**Event Name:** AWS Well-Architected Security Pillar  
 &emsp;**Role:** Attendee  
-&emsp;**Format:** Online workshop  
+&emsp;**Format:** On-site workshop  
 
 &emsp;**Content:** The session focused on the Security pillar of the AWS Well-Architected Framework. It covered identity and access management (IAM basics, least privilege, MFA, SCPs, permission boundaries, credential rotation), detection and continuous monitoring with CloudTrail, GuardDuty, and Security Hub, then moved to network and workload security using security groups, NACLs, AWS Network Firewall, Route 53 DNS Firewall, and VPC flow logs. The final part introduced data protection with AWS KMS, Secrets Manager, encryption in transit/at rest, and an overview of incident response best practices in the cloud.  
 &emsp;**Outcomes:** I learned how layered security on AWS works in practice and how to combine IAM, logging, network controls, and encryption to build more secure workloads.

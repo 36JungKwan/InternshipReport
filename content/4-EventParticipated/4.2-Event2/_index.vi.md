@@ -1,132 +1,144 @@
 ---
-title: "Event 2"
+title: "Sự Kiện 2"
 date: 2025-09-09
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Báo Cáo Tóm Tắt: "Tái Tưởng Tượng Phát Triển Phần Mềm với AI"
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+### Tổng Quan Sự Kiện
 
-### Mục Đích Của Sự Kiện
+- **Tên Sự Kiện:** Tái Tưởng Tượng Phát Triển Phần Mềm với AI  
+- **Ngày:** 3 tháng 10, 2025  
+- **Vai Trò:** Người tham dự  
+- **Hình Thức:** Buổi nói chuyện kỹ thuật và demo  
+- **Địa Điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower, Quận 1, Thành phố Hồ Chí Minh, Việt Nam
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+Sự kiện này khám phá cách generative AI đang thay đổi cơ bản vòng đời phát triển phần mềm, từ lập kế hoạch và thiết kế ban đầu qua coding, testing, deployment, và operations. Các diễn giả đã demo các quy trình làm việc hỗ trợ bởi AI thực tế và thảo luận các chiến lược để các team áp dụng an toàn và hiệu quả các công cụ mạnh mẽ này.
 
-### Danh Sách Diễn Giả
+### Các Chủ Đề Chính
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+#### Tạo Mã Hỗ Trợ Bởi AI
+- **Tạo mã**: Sử dụng AI để tạo boilerplate code, implement các hàm dựa trên comments, và tạo toàn bộ modules
+- **Refactoring mã**: Tận dụng AI để cải thiện chất lượng mã, tối ưu hiệu suất, và hiện đại hóa legacy code
+- **Hỗ trợ đa ngôn ngữ**: Các công cụ AI có thể làm việc trên nhiều ngôn ngữ lập trình và frameworks khác nhau
+- **Coding nhận biết ngữ cảnh**: Cách AI hiểu cấu trúc dự án, dependencies, và coding standards
 
-### Nội Dung Nổi Bật
+#### Testing & Đảm Bảo Chất Lượng
+- **Tạo test**: Tự động tạo unit tests, integration tests, và test cases từ mã
+- **Phân tích test coverage**: Sử dụng AI để xác định khoảng trống trong test coverage và đề xuất thêm tests
+- **Phát hiện lỗi**: Static analysis và code review hỗ trợ bởi AI để phát hiện sớm các vấn đề tiềm ẩn
+- **Performance testing**: Tạo load tests và performance benchmarks
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+#### Tài Liệu & Quản Lý Kiến Thức
+- **Tự động tạo tài liệu**: Tạo API documentation, code comments, và technical documentation từ mã
+- **Cập nhật tài liệu**: Giữ tài liệu đồng bộ với thay đổi mã tự động
+- **Trích xuất kiến thức**: Tóm tắt codebases và tạo tài liệu onboarding
+- **Viết kỹ thuật**: Hỗ trợ viết technical documentation rõ ràng, súc tích
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+#### Debugging & Troubleshooting
+- **Phân tích lỗi**: Hỗ trợ AI trong việc hiểu error messages và stack traces
+- **Phân tích nguyên nhân gốc**: Giúp xác định nguyên nhân cơ bản của bugs và issues
+- **Incident response**: Sử dụng AI để phân tích logs, metrics, và traces trong incidents
+- **Tối ưu hiệu suất**: Xác định bottlenecks và đề xuất cải thiện
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+#### Tích Hợp Với Quy Trình Phát Triển
+- **Tích hợp IDE**: AI assistants được nhúng trong các IDE phổ biến (VS Code, IntelliJ, v.v.)
+- **Tích hợp CI/CD**: Sử dụng AI trong pipelines cho code review, testing, và quyết định deployment
+- **Version control**: Tạo commit message hỗ trợ bởi AI và hỗ trợ code review
+- **Quản lý dự án**: Hỗ trợ AI trong task breakdown, estimation, và sprint planning
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+#### Best Practices Prompt Engineering
+- **Prompting hiệu quả**: Kỹ thuật viết prompts tạo ra kết quả chất lượng cao
+- **Tinh chỉnh lặp lại**: Cách tinh chỉnh prompts dựa trên outputs ban đầu
+- **Quản lý ngữ cảnh**: Cung cấp đúng lượng ngữ cảnh (mã, tài liệu, requirements)
+- **Patterns prompt**: Các pattern phổ biến cho các loại development tasks khác nhau
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+#### Quản Trị & An Toàn
+- **Chất lượng mã**: Đảm bảo mã được tạo bởi AI đáp ứng tiêu chuẩn chất lượng
+- **Cân nhắc bảo mật**: Ngăn AI giới thiệu vulnerabilities hoặc expose dữ liệu nhạy cảm
+- **Quyền riêng tư dữ liệu**: Hiểu dữ liệu nào được gửi đến dịch vụ AI và cách sử dụng
+- **Human-in-the-loop**: Khi nào và cách nào để liên quan human review trong quy trình hỗ trợ bởi AI
+- **Tuân thủ**: Đáp ứng yêu cầu quy định khi sử dụng công cụ AI
 
-#### Domain-Driven Design (DDD)
+### Insights Kỹ Thuật Chi Tiết
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+#### Hệ Sinh Thái Công Cụ Phát Triển AI
+Sự kiện bao gồm các danh mục công cụ phát triển AI khác nhau:
+- **Công cụ hoàn thành mã**: GitHub Copilot, Amazon CodeWhisperer, Tabnine
+- **Assistants dựa trên chat**: ChatGPT, Claude, coding assistants chuyên biệt
+- **Công cụ code review**: Code review và đề xuất hỗ trợ bởi AI
+- **Công cụ testing**: Test cases và test automation được tạo bởi AI
+- **Công cụ tài liệu**: Trình tạo tài liệu tự động
 
-#### Event-Driven Architecture
+#### Patterns Kiến Trúc Cho Tích Hợp AI
+- **Kiến trúc dựa trên agent**: Sử dụng AI agents có thể thực hiện các tác vụ phức tạp, nhiều bước
+- **RAG (Retrieval-Augmented Generation)**: Kết hợp AI với kiến thức codebase để có ngữ cảnh tốt hơn
+- **Fine-tuning vs prompt engineering**: Khi nào fine-tune models so với sử dụng prompts tốt hơn
+- **Cách tiếp cận hybrid**: Kết hợp nhiều công cụ và kỹ thuật AI
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+#### Best Practices Cho Áp Dụng Team
+- **Bắt đầu nhỏ**: Bắt đầu với các use case rủi ro thấp như tài liệu và tests
+- **Thiết lập hướng dẫn**: Tạo tiêu chuẩn team cho việc sử dụng công cụ AI
+- **Đào tạo và onboarding**: Giúp thành viên team học cách sử dụng công cụ AI hiệu quả
+- **Đo lường tác động**: Theo dõi cải thiện năng suất và metrics chất lượng mã
 
-#### Compute Evolution
+### Bài Học Quan Trọng
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+#### AI Như Một Pair Programmer
+- AI hiệu quả nhất khi được sử dụng như một **công cụ hợp tác** bổ sung cho developers, không thay thế họ
+- Kết quả tốt nhất đến từ các developers hiểu codebase và có thể hướng dẫn AI hiệu quả
+- AI xuất sắc ở các tác vụ lặp lại, boilerplate code, và patterns phổ biến, giải phóng developers cho giải quyết vấn đề phức tạp
 
-#### Amazon Q Developer
+#### Tầm Quan Trọng Của Ngữ Cảnh
+- Prompts chất lượng cao với ngữ cảnh tốt (kiến thức repository, coding standards, cấu trúc dự án) cải thiện đáng kể outputs của AI
+- Cung cấp examples và patterns từ codebase hiện có giúp AI tạo mã nhất quán hơn
+- Hiểu các giới hạn của AI context windows và làm việc trong các ràng buộc đó
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+#### Quản Lý Rủi Ro
+- Bắt đầu với các use case rủi ro thấp (tài liệu, tests, refactoring) trước khi chuyển sang mã quan trọng cho business
+- Luôn review mã được tạo bởi AI, đặc biệt cho các operations nhạy cảm về bảo mật
+- Sử dụng đề xuất AI như điểm khởi đầu, không phải giải pháp cuối cùng
 
-### Những Gì Học Được
+#### Tích Hợp Với DevOps
+- Kết hợp công cụ AI với thực hành DevOps hiện có (version control, code review, automated testing) đảm bảo an toàn và khả năng kiểm tra
+- AI có thể nâng cao CI/CD pipelines nhưng không nên bỏ qua các quality gates quan trọng
+- Sử dụng AI để cải thiện, không thay thế, các quy trình phát triển hiện có
 
-#### Tư Duy Thiết Kế
+### Bài Học Cá Nhân
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+#### Ứng Dụng Thực Tế
+- Tôi học được cách sử dụng công cụ AI để tăng tốc các tác vụ lặp lại như viết boilerplate code, tạo unit tests, và tạo tài liệu
+- Tôi hiểu cách viết prompts hiệu quả tạo ra kết quả hữu ích cho development tasks
+- Tôi có thể tích hợp hỗ trợ AI vào quy trình coding hàng ngày hiệu quả hơn
 
-#### Kiến Trúc Kỹ Thuật
+#### Phát Triển Kỹ Năng
+- Sự kiện củng cố rằng nền tảng vững chắc về kiến trúc, bảo mật, và clean code vẫn cần thiết
+- Tôi cần có khả năng đánh giá đề xuất được tạo bởi AI một cách phê phán và hiểu khi nào chúng phù hợp
+- Học cách làm việc với AI là một kỹ năng riêng cần thực hành và lặp lại
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+#### Thay Đổi Tư Duy
+- Sự kiện thay đổi cách tôi nghĩ về việc sử dụng AI trong phát triển - không phải về thay thế developers mà bổ sung khả năng của họ
+- Tôi có động lực hơn để tích hợp hỗ trợ AI vào quy trình học tập và phát triển của mình
+- Tôi hiểu rằng công cụ AI đang phát triển nhanh chóng, và việc cập nhật với các khả năng mới là quan trọng
 
-#### Chiến Lược Hiện Đại Hóa
+#### Học Tập Tương Lai
+- Tôi muốn khám phá các công cụ và kỹ thuật phát triển AI nâng cao hơn
+- Tôi quan tâm đến việc học về fine-tuning models cho các use case cụ thể
+- Tôi thấy giá trị trong việc hiểu cách xây dựng công cụ phát triển hỗ trợ bởi AI của chính mình
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+### Trải Nghiệm Sự Kiện
 
-### Ứng Dụng Vào Công Việc
+Sự kiện này mở mắt trong việc cho thấy AI đang chuyển đổi phát triển phần mềm như thế nào. Các demo thực tế và examples thực tế làm rõ rằng phát triển hỗ trợ bởi AI không phải là khái niệm tương lai mà là thực tế hiện tại.
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+Sự cân bằng giữa việc thể hiện khả năng AI và thảo luận về quản trị và an toàn đặc biệt có giá trị. Nó giúp tôi hiểu cả cơ hội và trách nhiệm đi kèm với việc sử dụng AI trong phát triển.
 
-### Trải nghiệm trong event
+Sự kiện đã ảnh hưởng đến cách tôi tiếp cận các tác vụ coding, làm cho tôi suy nghĩ kỹ hơn về khi nào và cách nào để tận dụng hỗ trợ AI trong khi duy trì tiêu chuẩn chất lượng mã và bảo mật.
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+### Ảnh Sự Kiện
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
-
-#### Bài học rút ra
-
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
-
-#### Một số hình ảnh khi tham gia sự kiện
-
-- Thêm các hình ảnh của các bạn tại đây
-  > Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+![Enter image alt description](/images/4-Event/event2_img1.jpg)
+![Enter image alt description](/images/4-Event/event2_img2.jpg)

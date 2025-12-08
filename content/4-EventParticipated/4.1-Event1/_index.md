@@ -11,7 +11,7 @@ pre: " <b> 4.1. </b> "
 ### Event Overview
 
 - **Event Name:** AWS Cloud Day Vietnam  
-- **Date:** October 3, 2025  
+- **Date:** September 18, 2025  
 - **Role:** Attendee  
 - **Format:** Multi-track, in-person conference  
 - **Location:** 26th floor, Bitexco Financial Tower, District 1, Ho Chi Minh City, Vietnam

@@ -249,5 +249,5 @@ The event structure allowed for good coverage of both foundational concepts and 
 
 ### Event Photos
 
-_Add your event photos here_
-
+![Enter image alt description](/images/4-Event/event5_img1.jpg)
+![Enter image alt description](/images/4-Event/event5_img2.jpg)
