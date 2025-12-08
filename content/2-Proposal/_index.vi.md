@@ -200,7 +200,7 @@ Chi phí tài chính trực tiếp của dự án là không đáng kể và đ�
 
 ### Tài liệu đính kèm / Tham khảo
 - [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=b574c31813807522d949cf5adca64b41612e12c7)
-- [GitHub Repository](https://gitlab.com/4n1d/mapvibe)
+- [GitLab Repository](https://gitlab.com/4n1d/mapvibe)
 
 ## 9. QUAN TRỌNG: Proposal bản docs
 - [Proposal Docs Version](https://docs.google.com/document/d/1-wM11mgTNaL8gvbMjAmukW9ZKzqGtHMp/edit)
