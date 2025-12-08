@@ -1,4 +1,4 @@
-title : "Create a gateway endpoint"
+title : "Monorepo Setup"
 date: 2025-09-09
 weight : 1
 chapter : false
@@ -6,36 +6,93 @@ pre : " <b> 5.3.1 </b> "
 
 ---
 
-1. Open the [Amazon VPC console](https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#Home:)
-2. In the navigation pane, choose **Endpoints**, then click **Create Endpoint**:
+#### Clone the Repository
 
-{{% notice note %}}
-You will see **6 existing VPC endpoints** that support **AWS Systems Manager (SSM)**. These endpoints were deployed automatically by the **CloudFormation Templates** for this workshop.
-{{% /notice %}}
+First, clone the MapVibe repository:
 
-![endpoint](/images/5-Workshop/5.3-S3-vpc/endpoints.png)
+```bash
+git clone <repository-url>
+cd mapvibe
+```
 
-3. In the Create endpoint console:
+#### Install Dependencies
 
-- Specify name of the endpoint: `s3-gwe`
-- In service category, choose **AWS services**
+Install all dependencies using Bun:
 
-![endpoint](/images/5-Workshop/5.3-S3-vpc/create-s3-gwe1.png)
+```bash
+bun install
+```
 
-- In **Services**, type `s3` in the search box and choose the service with type **gateway**
+This will install dependencies for all workspaces in the monorepo.
 
-![endpoint](/images/5-Workshop/5.3-S3-vpc/services.png)
+#### Workspace Configuration
 
-- For VPC, select **VPC Cloud** from the drop-down.
-- For **Configure route tables**, select the route table that is already associated with **two subnets** (note: this is not the main route table for the VPC, but a second route table created by CloudFormation).
+The project uses Bun workspaces defined in `package.json`:
 
-![endpoint](/images/5-Workshop/5.3-S3-vpc/vpc.png)
+```json
+{
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "infrastructure"
+  ]
+}
+```
 
-- **For Policy**, leave the default option, **Full Access**, to allow full access to the service. You will deploy **a VPC endpoint policy** in a later lab module to demonstrate restricting access to **S3 buckets** based on policies.
+#### TurboRepo Configuration
 
-![endpoint](/images/5-Workshop/5.3-S3-vpc/policy.png)
+TurboRepo is configured in `turbo.json` to manage build pipelines:
 
-- Do not add a tag to the VPC endpoint at this time.
-- Click **Create endpoint**, then click x after receiving a successful creation message.
+- **build** - Builds all packages and apps
+- **dev** - Runs development servers
+- **lint** - Lints all code
+- **type-check** - Type checks TypeScript
+- **deploy** - Deploys applications
 
-![endpoint](/images/5-Workshop/5.3-S3-vpc/complete.png)
+#### Development Scripts
+
+Common scripts available at the root:
+
+```bash
+# Start all development servers
+bun run dev
+
+# Build all packages and apps
+bun run build
+
+# Lint all code
+bun run lint
+
+# Type check
+bun run type-check
+
+# Format code
+bun run format
+```
+
+#### Environment Variables
+
+Create `.env` files as needed:
+
+1. Root `.env` - For infrastructure variables
+2. `apps/web/.env` - For frontend configuration
+3. `apps/admin/.env` - For admin dashboard
+
+Contact the project maintainer for required environment variables.
+
+#### Verify Setup
+
+Verify your setup by running:
+
+```bash
+# Check Bun version
+bun --version
+
+# Install dependencies
+bun install
+
+# Run type check
+bun run type-check
+```
+
+If all commands succeed, your monorepo is ready for development!

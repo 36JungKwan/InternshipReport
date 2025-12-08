@@ -1,4 +1,4 @@
-title : "Tạo một Gateway Endpoint"
+title : "Thiết lập Monorepo"
 date: 2025-09-09
 weight : 1
 chapter : false
@@ -6,36 +6,93 @@ pre : " <b> 5.3.1 </b> "
 
 ---
 
-1. Mở [Amazon VPC console](https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#Home:)
-2. Trong thanh điều hướng, chọn **Endpoints**, click **Create Endpoint**:
+#### Clone Repository
 
-{{% notice note %}}
-Bạn sẽ thấy 6 điểm cuối VPC hiện có hỗ trợ AWS Systems Manager (SSM). Các điểm cuối này được Mẫu CloudFormation triển khai tự động cho workshop này.
-{{% /notice %}}
+Đầu tiên, clone repository MapVibe:
 
-![endpoint](/images/5-Workshop/5.3-S3-vpc/endpoints.png)
+```bash
+git clone <repository-url>
+cd mapvibe
+```
 
-3. Trong Create endpoint console:
+#### Cài đặt Dependencies
 
-- Đặt tên cho endpoint: s3-gwe
-- Trong service category, chọn **aws services**
+Cài đặt tất cả dependencies bằng Bun:
 
-![endpoint](/images/5-Workshop/5.3-S3-vpc/create-s3-gwe1.png)
+```bash
+bun install
+```
 
-- Trong **Services**, gõ "s3" trong hộp tìm kiếm và chọn dịch vụ với loại **gateway**
+Lệnh này sẽ cài đặt dependencies cho tất cả workspaces trong monorepo.
 
-![endpoint](/images/5-Workshop/5.3-S3-vpc/services.png)
+#### Cấu hình Workspace
 
-- Đối với VPC, chọn **VPC Cloud** từ drop-down menu.
-- Đối với Route tables, chọn bảng định tuyến mà đã liên kết với 2 subnets (lưu ý: đây không phải là bảng định tuyến chính cho VPC mà là bảng định tuyến thứ hai do CloudFormation tạo).
+Dự án sử dụng Bun workspaces được định nghĩa trong `package.json`:
 
-![endpoint](/images/5-Workshop/5.3-S3-vpc/vpc.png)
+```json
+{
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "infrastructure"
+  ]
+}
+```
 
-- Đối với Policy, để tùy chọn mặc định là Full access để cho phép toàn quyền truy cập vào dịch vụ. Bạn sẽ triển khai VPC endpoint policy trong phần sau để chứng minh việc hạn chế quyền truy cập vào S3 bucket dựa trên các policies.
+#### Cấu hình TurboRepo
 
-![endpoint](/images/5-Workshop/5.3-S3-vpc/policy.png)
+TurboRepo được cấu hình trong `turbo.json` để quản lý build pipelines:
 
-- Không thêm tag vào VPC endpoint.
-- Click Create endpoint, click x sau khi nhận được thông báo tạo thành công.
+- **build** - Build tất cả packages và apps
+- **dev** - Chạy development servers
+- **lint** - Lint tất cả code
+- **type-check** - Kiểm tra kiểu TypeScript
+- **deploy** - Triển khai ứng dụng
 
-![endpoint](/images/5-Workshop/5.3-S3-vpc/complete.png)
+#### Scripts Phát triển
+
+Các script phổ biến có sẵn ở root:
+
+```bash
+# Khởi động tất cả development servers
+bun run dev
+
+# Build tất cả packages và apps
+bun run build
+
+# Lint tất cả code
+bun run lint
+
+# Kiểm tra kiểu
+bun run type-check
+
+# Format code
+bun run format
+```
+
+#### Biến môi trường
+
+Tạo các file `.env` khi cần:
+
+1. `.env` gốc - Cho các biến hạ tầng
+2. `apps/web/.env` - Cho cấu hình frontend
+3. `apps/admin/.env` - Cho admin dashboard
+
+Liên hệ người duy trì dự án để lấy các biến môi trường cần thiết.
+
+#### Xác minh Thiết lập
+
+Xác minh thiết lập của bạn bằng cách chạy:
+
+```bash
+# Kiểm tra phiên bản Bun
+bun --version
+
+# Cài đặt dependencies
+bun install
+
+# Chạy type check
+bun run type-check
+```
+
+Nếu tất cả các lệnh thành công, monorepo của bạn đã sẵn sàng để phát triển!

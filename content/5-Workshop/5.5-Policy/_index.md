@@ -1,4 +1,4 @@
-title : "VPC Endpoint Policies"
+title : "Development & Deployment"
 date: 2025-09-09
 weight : 5
 chapter : false
@@ -6,13 +6,89 @@ pre : " <b> 5.5. </b> "
 
 ---
 
-When you create an interface or gateway endpoint, you can attach an endpoint policy to it that controls access to the service to which you are connecting. A VPC endpoint policy is an IAM resource policy that you attach to an endpoint. If you do not attach a policy when you create an endpoint, AWS attaches a default policy for you that allows full access to the service through the endpoint.
+#### Overview
 
-You can create a policy that restricts access to specific S3 buckets only. This is useful if you only want certain S3 Buckets to be accessible through the endpoint.
+This section covers the development workflow and deployment process for MapVibe applications.
 
-In this section you will create a VPC endpoint policy that restricts access to the S3 bucket specified in the VPC endpoint policy.
+#### Development Workflow
 
-![endpoint diagram](/images/5-Workshop/5.5-Policy/s3-bucket-policy.png)
+1. **Local Development**
+   - Run frontend apps locally with `bun run dev`
+   - Test API locally with `bun run dev` in `apps/api`
+   - Use local database or connect to dev RDS
+
+2. **Build Process**
+   - Build all packages: `bun run build`
+   - Build specific app: `cd apps/web && bun run build`
+
+3. **Testing**
+   - Type checking: `bun run type-check`
+   - Linting: `bun run lint`
+
+#### Deployment Process
+
+##### Deploy Infrastructure
+
+```bash
+cd infrastructure/terraform
+terraform apply
+```
+
+##### Deploy API
+
+```bash
+# Build API
+cd apps/api
+bun run build
+
+# Deploy using script
+bun run deploy
+# Or use: pwsh ../../scripts/deploy-api.ps1
+```
+
+##### Deploy Frontend (Web)
+
+```bash
+# Build frontend
+cd apps/web
+bun run build
+
+# Deploy to S3 + CloudFront
+bun run deploy
+```
+
+##### Deploy Admin Dashboard
+
+```bash
+# Build admin
+cd apps/admin
+bun run build
+
+# Deploy using script
+pwsh ../../scripts/deploy-admin.ps1
+```
+
+##### Run Database Migrations
+
+```bash
+pwsh scripts/deploy-migrate.ps1
+```
+
+#### Deployment Scripts
+
+The `scripts/` directory contains PowerShell scripts for deployment:
+- `deploy-api.ps1` - Deploy API Lambda
+- `deploy-admin.ps1` - Deploy admin dashboard
+- `deploy-migrate.ps1` - Run database migrations
+- `build-all-lambdas.ps1` - Build all Lambda functions
+
+#### Best Practices
+
+1. **Always test locally** before deploying
+2. **Use environment-specific configurations**
+3. **Monitor CloudWatch logs** after deployment
+4. **Verify deployments** by testing endpoints
+5. **Keep infrastructure in sync** with code changes
 
 #### Connect to an EC2 instance and verify connectivity to S3
 

@@ -1,4 +1,4 @@
-title : "Prepare the environment"
+title : "Terraform Setup"
 date: 2025-09-09
 weight : 1
 chapter : false
@@ -6,52 +6,69 @@ pre : " <b> 5.4.1 </b> "
 
 ---
 
-To prepare for this part of the workshop you will need to:
+#### Prerequisites
 
-- Deploying a CloudFormation stack
-- Modifying a VPC route table.
+Before deploying infrastructure, ensure you have:
 
-These components work together to simulate on-premises DNS forwarding and name resolution.
+1. **Terraform installed** (>= 1.0)
+2. **AWS CLI configured** with appropriate credentials
+3. **AWS account** with necessary permissions
 
-#### Deploy the CloudFormation stack
+#### Configure Terraform Variables
 
-The CloudFormation template will create additional services to support an on-premises simulation:
+Navigate to the infrastructure directory:
 
-- One Route 53 Private Hosted Zone that hosts Alias records for the PrivateLink S3 endpoint
-- One Route 53 Inbound Resolver endpoint that enables "VPC Cloud" to resolve inbound DNS resolution requests to the Private Hosted Zone
-- One Route 53 Outbound Resolver endpoint that enables "VPC On-prem" to forward DNS requests for S3 to "VPC Cloud"
+```bash
+cd infrastructure/terraform
+```
 
-![route 53 diagram](/images/5-Workshop/5.4-S3-onprem/route53.png)
+Create a `terraform.tfvars` file (or use environment variables):
 
-1. Click the following link to open the [AWS CloudFormation console](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3.amazonaws.com/reinvent-endpoints-builders-session/R53CF.yaml&stackName=PLOnpremSetup). The required template will be pre-loaded into the menu. Accept all default and click Create stack.
+```hcl
+aws_region     = "ap-southeast-1"
+environment    = "mvp"
+project_name   = "mapvibe"
+db_name        = "mapvibe"
 
-![Create stack](/images/5-Workshop/5.4-S3-onprem/create-stack.png)
+# Optional: Google OAuth
+google_client_id     = ""
+google_client_secret = ""
+```
 
-![Button](/images/5-Workshop/5.4-S3-onprem/create-stack-button.png)
+#### Initialize Terraform
 
-It may take a few minutes for stack deployment to complete. You can continue with the next step without waiting for the deployemnt to finish.
+Initialize Terraform to download providers:
 
-#### Update on-premise private route table
+```bash
+terraform init
+```
 
-This workshop uses a strongSwan VPN running on an EC2 instance to simulate connectivty between an on-premises datacenter and the AWS cloud. Most of the required components are provisioned before your start. To finalize the VPN configuration, you will modify the "VPC On-prem" routing table to direct traffic destined for the cloud to the strongSwan VPN instance.
+This will:
+- Download the AWS provider
+- Set up the backend (if configured)
+- Initialize modules
 
-1. Open the Amazon EC2 console
+#### Review Terraform Plan
 
-2. Select the instance named infra-vpngw-test. From the Details tab, copy the Instance ID and paste this into your text editor
+Before applying, review what will be created:
 
-![ec2 id](/images/5-Workshop/5.4-S3-onprem/ec2-onprem-id.png)
+```bash
+terraform plan
+```
 
-3. Navigate to the VPC menu by using the Search box at the top of the browser window.
+This shows:
+- Resources to be created
+- Resources to be modified
+- Resources to be destroyed
 
-4. Click on Route Tables, select the RT Private On-prem route table, select the Routes tab, and click Edit Routes.
+#### Important Notes
 
-![rt](/images/5-Workshop/5.4-S3-onprem/rt.png)
+- **Cost**: This infrastructure will create billable AWS resources
+- **Region**: Default is `ap-southeast-1` (Singapore)
+- **WAF**: Requires `us-east-1` for CloudFront (handled automatically)
+- **Database**: RDS instance will be created (db.t3.micro for MVP)
+- **Domain**: You'll need a domain name for Route53 (e.g., mapvibe.site)
 
-5. Click Add route.
+#### Next Steps
 
-- Destination: your Cloud VPC cidr range
-- Target: ID of your infra-vpngw-test instance (you saved in your editor at step 1)
-
-![add route](/images/5-Workshop/5.4-S3-onprem/add-route.png)
-
-6. Click Save changes
+Once Terraform is initialized and configured, proceed to deploy the infrastructure.

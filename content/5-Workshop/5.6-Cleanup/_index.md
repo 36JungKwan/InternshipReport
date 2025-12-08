@@ -1,4 +1,4 @@
-title : "Clean up"
+title : "Cleanup"
 date: 2025-09-09
 weight : 6
 chapter : false
@@ -6,32 +6,107 @@ pre : " <b> 5.6. </b> "
 
 ---
 
-Congratulations on completing this workshop!
-In this workshop, you learned architecture patterns for accessing Amazon S3 without using the Public Internet.
+#### Overview
 
-- By creating a gateway endpoint, you enabled direct communication between EC2 resources and Amazon S3, without traversing an Internet Gateway.
-- By creating an interface endpoint you extended S3 connectivity to resources running in your on-premises data center via AWS Site-to-Site VPN or Direct Connect.
+Congratulations on completing the MapVibe workshop!
 
-#### clean up
+In this workshop, you learned:
+- How to set up a monorepo with TurboRepo and Bun
+- How to deploy serverless infrastructure using Terraform
+- How to build and deploy React applications
+- How to configure AWS services (Lambda, RDS, API Gateway, CloudFront, Cognito)
+- How to integrate AI services (Bedrock, Rekognition, Textract)
 
-1. Navigate to Hosted Zones on the left side of Route 53 console. Click the name of _s3.us-east-1.amazonaws.com_ zone. Click Delete and confirm deletion by typing delete.
+#### Cleanup Resources
 
-![hosted zone](/images/5-Workshop/5.6-Cleanup/delete-zone.png)
+To avoid ongoing costs, clean up all AWS resources when you're done.
 
-2. Disassociate the Route 53 Resolver Rule - myS3Rule from "VPC Onprem" and Delete it.
+##### 1. Destroy Infrastructure with Terraform
 
-![hosted zone](/images/5-Workshop/5.6-Cleanup/vpc.png)
+The easiest way to clean up is using Terraform:
 
-4. Open the CloudFormation console and delete the two CloudFormation Stacks that you created for this lab:
+```bash
+cd infrastructure/terraform
 
-- PLOnpremSetup
-- PLCloudSetup
+# Review what will be destroyed
+terraform plan -destroy
 
-![delete stack](/images/5-Workshop/5.6-Cleanup/delete-stack.png)
+# Destroy all resources
+terraform destroy
+```
 
-5. Delete S3 buckets
+This will remove:
+- All Lambda functions
+- API Gateway
+- RDS database instance
+- CloudFront distributions
+- S3 buckets (if empty)
+- Cognito User Pool
+- VPC and networking resources
+- Route53 hosted zones
+- WAF web ACLs
+- Secrets Manager secrets
 
-- Open S3 console
-- Choose the bucket we created for the lab, click and confirm empty. Click delete and confirm delete.
+**Note**: Some resources may take time to delete (e.g., RDS final snapshot, CloudFront propagation).
 
-![delete s3](/images/5-Workshop/5.6-Cleanup/delete-s3.png)
+##### 2. Manual Cleanup (if needed)
+
+If Terraform destroy doesn't remove everything, manually clean up:
+
+**S3 Buckets:**
+```bash
+# List buckets
+aws s3 ls | grep mapvibe
+
+# Empty and delete each bucket
+aws s3 rm s3://bucket-name --recursive
+aws s3 rb s3://bucket-name
+```
+
+**CloudWatch Logs:**
+```bash
+# Delete log groups
+aws logs describe-log-groups --query "logGroups[?contains(logGroupName, 'mapvibe')]" --output table
+aws logs delete-log-group --log-group-name <log-group-name>
+```
+
+**Route53 Hosted Zones:**
+```bash
+# List hosted zones
+aws route53 list-hosted-zones --query "HostedZones[?contains(Name, 'mapvibe')]"
+
+# Delete hosted zone (requires deleting all records first)
+aws route53 delete-hosted-zone --id <hosted-zone-id>
+```
+
+##### 3. Verify Cleanup
+
+Verify all resources are deleted:
+
+```bash
+# Check Lambda functions
+aws lambda list-functions --query "Functions[?contains(FunctionName, 'mapvibe')]"
+
+# Check S3 buckets
+aws s3 ls | grep mapvibe
+
+# Check RDS instances
+aws rds describe-db-instances --query "DBInstances[?contains(DBInstanceIdentifier, 'mapvibe')]"
+```
+
+#### Important Notes
+
+- **Data Loss**: Destroying infrastructure will delete all data (database, S3 objects, etc.)
+- **Backup**: Export any important data before cleanup
+- **Costs**: Some resources (like RDS snapshots) may incur minimal storage costs
+- **DNS**: If using a custom domain, update DNS records after cleanup
+
+#### Next Steps
+
+After cleanup:
+1. Review what you learned
+2. Experiment with modifications
+3. Consider production deployment patterns
+4. Explore additional AWS services
+
+Thank you for completing the MapVibe workshop!
