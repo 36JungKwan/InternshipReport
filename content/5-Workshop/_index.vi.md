@@ -5,11 +5,6 @@ weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 # MapVibe - Xây dựng Nền tảng Khám phá Địa điểm với AI
 
 #### Tổng quan
